@@ -1,0 +1,5 @@
+This is an example of one of the queries I performed in SQLite.
+
+CREATE TABLE records_flat AS 
+SELECT records9.id, age, workclass, education_level, education_num, marital_status, occupation, relationship, race, sex, capital_gain, capital_loss, hours_week, countries.name as country, over_50k 
+FROM records9 LEFT JOIN countries ON records9.country_id=countries.id;
